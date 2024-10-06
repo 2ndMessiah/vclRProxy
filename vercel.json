@@ -1,8 +1,5 @@
 {
   "rewrites": [
-    { "source": "/p/:match/:url*", "destination": "https://:match/:url*" },
-    { "source": "/p/:match/:url*/", "destination": "https://:match/:url*/" },
-    { "source": "/hp/:match/:url*", "destination": "http://:match/:url*" },
-    { "source": "/hp/:match/:url*/", "destination": "http://:match/:url*/" }
+    { "source": "/(.*)", "destination": "/middleware" }
   ]
 }
