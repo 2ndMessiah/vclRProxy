@@ -1,5 +1,8 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/middleware" }
+    {
+      "source": "/(.*)",  
+      "destination": "/api/p"
+    }
   ]
 }
