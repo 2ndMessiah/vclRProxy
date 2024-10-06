@@ -1,8 +1,10 @@
 {
-  "rewrites": [
-    { "source": "/p/:match/:url*", "destination": "https://:match/:url*" },
-    { "source": "/p/:match/:url*/", "destination": "https://:match/:url*/" },
-    { "source": "/hp/:match/:url*", "destination": "http://:match/:url*" },
-    { "source": "/hp/:match/:url*/", "destination": "http://:match/:url*/" }
+  "version": 2,
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/public/index.html" },
+    { "src": "/(.*)", "dest": "/api/p.js" }
   ]
 }
